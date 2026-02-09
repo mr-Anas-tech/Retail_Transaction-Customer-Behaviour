@@ -1,10 +1,10 @@
--- 1. Product Hierarchy Table (Sabse pehle isse banayein)
+-- 1. Product Hierarchy Table 
 CREATE TABLE prod_cat_info (
     prod_cat_code INT,
     prod_cat VARCHAR(50),
     prod_sub_cat_code INT,
     prod_subcat VARCHAR(50),
-    PRIMARY KEY (prod_cat_code, prod_sub_cat_code) -- Composite Primary Key
+    PRIMARY KEY (prod_cat_code, prod_sub_cat_code) 
 );
 
 SELECT * FROM prod_cat_info;
@@ -24,7 +24,6 @@ copy customers FROM 'C:\Users\QC#\OneDrive\Documents\Customers.csv'
 Delimiter ','
 CSV HEADER;
 
--- 3. Transactions Table (Ismein Foreign Keys hain)
 CREATE TABLE transactions (
     transaction_id BIGINT,
     cust_id INT,
@@ -143,4 +142,5 @@ SUM(SUM(total_amt)) over(order by tran_date) AS running_total
 	           Order by tran_date;
 			   
 				  
+
 	   
